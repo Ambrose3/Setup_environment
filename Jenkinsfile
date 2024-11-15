@@ -22,8 +22,8 @@ pipeline {
 
             steps {
                 withDockerRegistry(credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/') {
-                    sh 'docker build -t khaliddinh/springboot .'
-                    sh 'docker push khaliddinh/springboot'
+                    sh 'docker build -t truongthanh2a3/springboot .'
+                    sh 'docker push truongthanh2a3/springboot'
                 }
             }
         }
