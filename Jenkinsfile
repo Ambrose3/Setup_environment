@@ -23,10 +23,11 @@ pipeline {
             steps {
                 withDockerRegistry(credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/') {
                     sh 'docker build -t truongthanh2a3/springboot .'
+                    sh 'docker login -u truongthanh2a3 -p Ambrose-bro33'
                     sh 'docker push truongthanh2a3/springboot'
                 }
             }
-        }
+        } 
 
         stage('Deploy MySQL to DEV') {
             steps {
